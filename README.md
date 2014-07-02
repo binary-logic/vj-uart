@@ -29,4 +29,8 @@ every character you type will be echoed back to you.
   
 Copyright (C) 2014 Binary Logic (nhi.phan.logic at gmail.com).
 
+Credit for the inspritation to develop this code must go to Chris Zeh and
+his Idle Logic blog;
+http://idle-logic.com/2012/04/15/talking-to-the-de0-nano-using-the-virtual-jtag-interface
+
 This file is part of the Virtual JTAG UART toolkit
