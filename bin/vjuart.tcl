@@ -78,6 +78,7 @@ proc closeport { } {
 	catch {close_device}
 }
 
+# Convert decimal number to the required binary code
 proc dec2bin {i {width {}}} {
 
     set res {}
@@ -100,6 +101,7 @@ proc dec2bin {i {width {}}} {
     return $sign$res
 }
 
+# Convert a binary string to a decimal/ascii number
 proc bin2dec {bin} {
     if {$bin == 0} {
         return 0
@@ -112,15 +114,13 @@ proc bin2dec {bin} {
     return $sign[expr 0b$bin]
 }
 
-# Various POC conversions
-# puts [dec2bin $ascii 8]
-# puts [bin2dec [dec2bin $ascii 8]]
-
+# Send data to the Altera input FIFO buffer
 proc send {chr} {
 	device_virtual_ir_shift -instance_index 0 -ir_value 1 -no_captured_ir_value
 	device_virtual_dr_shift -dr_value [dec2bin $chr 8] -instance_index 0  -length 8 -no_captured_dr_value
 }
 
+# Read data in from the Altera output FIFO buffer
 proc recv {} {
 	# Check if there is anything to read
 	device_virtual_ir_shift -instance_index 0 -ir_value 2 -no_captured_ir_value

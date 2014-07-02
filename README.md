@@ -9,7 +9,8 @@ allow data to be passed to a "Virtual VJTAG" adapter coded into your design.
 This project provides a "Virtual UART" allowing information to be easily
 exchanged between a PC and the design inside the Altera chip.  This is
 particularly handy for devices like the excellent Terasic DE0-Nano, that
-only have one USB connection for the built-in USB Blaster.
+only have one USB connection for the built-in USB Blaster and no other
+built-in UART.
 
 The sample TCL script connects to the first USB Blaster device through the
 Quartus STP application and listens on a TCP connection.
@@ -17,7 +18,7 @@ Quartus STP application and listens on a TCP connection.
 QUICK START:
 <pre>
 1. Upload the bitstream to your device.  Use Quartus II or urJTag:
-	urjtag ./vjtag.svf
+	urjtag ./vjuart.svf
 2. Run the TCL script:
 	./vjuart.tcl
 3. Telnet to the listening port:
