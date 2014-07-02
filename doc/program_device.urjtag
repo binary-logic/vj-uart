@@ -1,0 +1,7 @@
+cable usbblaster
+bsdl path ../board/bsd
+usleep 100000
+detect
+usleep 100000
+svf ../DE0_Comm.svf
+quit

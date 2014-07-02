@@ -1,0 +1,116 @@
+#Connect to the USB Blaster
+cable usbblaster
+usleep 100000
+bsdl path ../board/bsd/
+detect
+#Set up the JTAG instructions and data registers
+usleep 100000
+register VIR 5
+register VDR 8
+register VSTATUS 4
+register VBYPASS 1
+instruction VIR 0000001110 VIR
+instruction VDR 0000001100 VDR
+instruction VSTATUS 0000001100 VSTATUS
+instruction VBYPASS 0000001100 VBYPASS
+#Get the data out of the device
+instruction VIR
+shift ir
+dr 10000
+shift dr
+instruction VDR
+shift ir
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+#Shift in some data
+instruction VIR
+shift ir
+dr 10001
+shift dr
+instruction VDR
+shift ir
+dr 11110001
+shift dr
+dr 11110011
+shift dr
+dr 11110010
+shift dr
+#Shift out some data again
+instruction VIR
+shift ir
+dr 10000
+shift dr
+instruction VDR
+shift ir
+shift dr
+dr out
+shift dr
+dr out
+shift dr
+dr out
+# Get the status register
+instruction VIR
+shift ir
+dr 10010
+shift dr
+instruction VSTATUS
+shift ir
+shift dr
+dr out
+# Change to bypass
+instruction VIR
+shift ir
+dr 10011
+shift dr
+instruction VSTATUS
+shift ir
