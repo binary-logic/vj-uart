@@ -15,13 +15,14 @@ The sample TCL script connects to the first USB Blaster device through the
 Quartus STP application and listens on a TCP connection.
 
 QUICK START:
+<pre>
 1. Upload the bitstream to your device.  Use Quartus II or urJTag:
 	urjtag ./vjtag.svf
 2. Run the TCL script:
 	./vjuart.tcl
 3. Telnet to the listening port:
 	telnet localhost 2323
-
+</pre>
 If all went well, the screen should show you the alphabet, A through Z and
 every character you type will be echoed back to you.
   
