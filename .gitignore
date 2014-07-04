@@ -1,0 +1,13 @@
+*.flock
+*.rpt
+*.done
+*.summary
+*.smsg
+*.qmsg
+*.jdi
+*.cdb
+*.hdb
+*.rdb
+*.ddb
+db/
+incremental_db/
