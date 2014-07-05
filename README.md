@@ -17,18 +17,17 @@ Quartus STP application and listens on a TCP connection.
 
 QUICK START:
 <pre>
-1. Upload the bitstream to your device.  Use Quartus II or urJTag:
+1. Build the bitstream using Altera Quartus II
+2. Upload the bitstream to your device.  Use Quartus II programmer or urJTag:
 	urjtag ./vjuart.svf
-2. Run the TCL script:
+3. Run the TCL script:
 	./vjuart.tcl
-3. Telnet to the listening port:
+4. Telnet to the listening port:
 	telnet localhost 2323
 </pre>
 If all went well, the screen should show you the alphabet, A through Z and
 every character you type will be echoed back to you.
   
-Copyright (C) 2014 Binary Logic (nhi.phan.logic at gmail.com).
-
 Credit for the inspritation to develop this code must go to Chris Zeh and
 his Idle Logic blog;
 http://idle-logic.com/2012/04/15/talking-to-the-de0-nano-using-the-virtual-jtag-interface
