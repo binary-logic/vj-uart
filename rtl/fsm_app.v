@@ -113,12 +113,12 @@ begin
 				end
 			S_READ :
 				begin
+					rd = 1'b0;
 					data_out = data_in;
 					state = S_SETTLE;
 				end
 			S_SETTLE :
 				begin
-					rd = 1'b0;
 					wr = 1'b0;
 					state = S_WRITE;
 				end

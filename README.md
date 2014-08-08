@@ -19,9 +19,10 @@ QUICK START:
 <pre>
 1. Build the bitstream using Altera Quartus II
 2. Upload the bitstream to your device.  Use Quartus II programmer or urJTag:
-	urjtag ./vjuart.svf
+	jtag vjuart.svf
 3. Run the TCL script:
-	./vjuart.tcl
+	./vjuart.tcl (for linux) or
+	quartus_stp -t vjuart.tcl (for windows)
 4. Telnet to the listening port:
 	telnet localhost 2323
 </pre>
