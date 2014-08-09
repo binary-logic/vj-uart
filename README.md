@@ -12,7 +12,7 @@ particularly handy for devices like the excellent Terasic DE0-Nano, that
 only have one USB connection for the built-in USB Blaster and no other
 built-in UART.
 
-The performance on this interface is about 1600 bps and is limited by the USB blaster speed and the protocol.
+The performance on this interface is the equivalent of about 1600 bps (measured 1294 bps/162 cps actual) and is limited by the USB blaster speed and the protocol.
 
 The sample TCL script connects to the first USB Blaster device through the
 Quartus STP application and listens on a TCP connection.
